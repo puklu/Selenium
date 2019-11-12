@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Practice Suite" parallel="test" thread-count="2">
+    <test name="TestNG Testcases" >
+  
+    <groups>
+      
+         <define name = "all">
+           	<include name = "smoke"/>
+            <include name = "regression"/>
+         </define>
+         
+         <run>
+            <include name = "all"/>
+         </run>
+         
+      </groups>
+        <classes>
+            <class name="testNG.TestNGExamples" />         
+        </classes>
+    </test>
+</suite>
